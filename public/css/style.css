@@ -1,0 +1,1507 @@
+/* CSS Document */
+@font-face {
+  font-family: 'UniversNextforHSBC-Bold';
+  src: url("fonts/UniversNextforHSBC-Bold.eot");
+  /* IE9+ Compat Modes */
+  src: url("fonts/UniversNextforHSBC-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/UniversNextforHSBC-Bold.woff") format("woff"), url("fonts/UniversNextforHSBC-Bold.ttf") format("truetype"), url("fonts/UniversNextforHSBC-Bold.svg#webfont") format("svg");
+  /* Legacy iOS */ }
+@font-face {
+  font-family: 'UniversNextforHSBC-Light';
+  src: url("fonts/UniversNextforHSBC-Light.eot");
+  /* IE9+ Compat Modes */
+  src: url("fonts/UniversNextforHSBC-Light.eot?#iefix") format("embedded-opentype"), url("fonts/UniversNextforHSBC-Light.woff") format("woff"), url("fonts/UniversNextforHSBC-Light.ttf") format("truetype"), url("fonts/UniversNextforHSBC-Light.svg#webfont") format("svg");
+  /* Legacy iOS */ }
+@font-face {
+  font-family: 'UniversNextforHSBC-Thin';
+  src: url("fonts/UniversNextforHSBC-Thin.eot");
+  /* IE9+ Compat Modes */
+  src: url("fonts/UniversNextforHSBC-Thin.eot?#iefix") format("embedded-opentype"), url("fonts/UniversNextforHSBC-Thin.woff") format("woff"), url("fonts/UniversNextforHSBC-Thin.ttf") format("truetype"), url("fonts/UniversNextforHSBC-Thin.svg#webfont") format("svg");
+  /* Legacy iOS */ }
+@font-face {
+  font-family: 'UniversNextforHSBC-Medium';
+  src: url("fonts/UniversNextforHSBC-Medium.eot");
+  /* IE9+ Compat Modes */
+  src: url("fonts/UniversNextforHSBC-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/UniversNextforHSBC-Medium.woff") format("woff"), url("fonts/UniversNextforHSBC-Medium.ttf") format("truetype"), url("fonts/UniversNextforHSBC-Medium.svg#webfont") format("svg");
+  /* Legacy iOS */ }
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  color: #000000;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-family: 'UniversNextforHSBC-Light';
+  font-size: 16px; }
+
+strong {
+  font-family: 'UniversNextforHSBC-Bold' !important;
+  font-size: 100%;
+  /* font-weight: 700; */ }
+
+.chs_text_thin {
+  font-family: 'UniversNextforHSBC-Thien' !important;
+  font-size: 100%; }
+
+.chs_text_red {
+  color: #db0011; }
+
+.chs_text_white {
+  color: #FFFFFF; }
+
+.chs_translate_bg.sticky_show {
+  /* position: fixed; */
+  top: 0px;
+  transition: top 0.3s; }
+
+.chs_translate_bg.sticky {
+  /* position: relative; */
+  top: -25px;
+  transition: top 0.3s; }
+
+.chs_header_bg.sticky_show {
+  /* position: fixed; */
+  top: 0px;
+  transition: top 0.3s; }
+
+.chs_header_bg.sticky {
+  /* position: relative; */
+  top: -80px;
+  transition: top 0.3s; }
+
+.chs_header_bg {
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 75px;
+  margin: 0 !important;
+  box-shadow: 0px 10px 10px -10px #000;
+  position: fixed;
+  /* top: 0px; */
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */ }
+
+.chs_footer_bg {
+  width: 100%;
+  background-color: #000000;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: left; }
+
+.chs_middle {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto !important;
+  float: none !important; }
+
+.chs_translate {
+  height: 30px; }
+
+.chs_translate > a {
+  float: right;
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+  font-size: 12px;
+  padding-top: 5px; }
+
+.chs_translate > a > i {
+  padding-left: 10px; }
+
+.chs_border {
+  width: 100%;
+  height: auto;
+  margin: 0 !important;
+  padding: 0 !important; }
+
+/* .chs_header_logo {
+	margin-left: 15px;
+} */
+/*FOOTER*/
+.chs_footer {
+  width: 100%;
+  height: auto;
+  float: left; }
+
+.chs_footer_tnc {
+  padding: 10px 0; }
+
+.chs_footer_tnc_links > a {
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+  font-size: 12px; }
+
+.chs_footer_tnc_text {
+  color: #FFFFFF;
+  font-size: 12px;
+  float: right;
+  padding: 10px 0; }
+
+/*KEY VISUAL*/
+.chs_key_info {
+  position: relative;
+  width: 100%;
+  height: auto;
+  float: left;
+  margin: 75px 0 0 0 !important; }
+
+.chs_dash_info {
+  position: relative;
+  width: 100%;
+  height: auto;
+  float: left;
+  margin: 0 !important; }
+
+.chs_key_talent, .chs_key_item {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.chs_key_headline {
+  width: 90%;
+  text-align: center !important;
+  font-size: 25px;
+  padding-top: 30px;
+  margin: 0 auto; }
+
+.chs_key_headline strong {
+  /* font-family: 'UniversNextforHSBC-Bold' !important; */
+  font-size: 50px;
+  color: #db0011; }
+
+img.slide_bg_img, img.chs_key_talent_img, img.chs_key_item_img {
+  width: 100%;
+  height: auto; }
+
+img.chs_key_item_img {
+  width: 100%;
+  height: auto;
+  display: none; }
+
+.item_1 {
+  display: block; }
+
+.bx-wrapper {
+  -moz-box-shadow: 0 !important;
+  -webkit-box-shadow: 0 !important;
+  box-shadow: 0 !important;
+  border: none !important;
+  background: 0; }
+
+.chs_slider {
+  position: relative;
+  height: 720px; }
+
+.slider {
+  margin: 0 auto;
+  max-width: 100%; }
+
+.slide_viewer {
+  height: 1300px;
+  overflow: hidden;
+  position: relative; }
+
+.slide_group {
+  height: 100%;
+  position: relative;
+  width: 100%; }
+
+/* .slide {
+  display: none;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.slide:first-child {
+  display: block;
+} */
+/* .chs_promotion_info {
+	width: 100%;
+	height: auto;
+	background-image: url(../images/cashback/chs_background_2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center !important;
+	float: left;
+	margin: 0 !important;
+	z-index: 100;
+	position: relative;
+	display: table;
+
+} */
+/*CARDS INTRO*/
+.chs_cards_info {
+  width: 100%;
+  height: auto;
+  background-image: url(../images/cashback/chs_background_1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center !important;
+  float: left;
+  margin: 0 !important;
+  z-index: 100;
+  position: relative;
+  display: table;
+  padding: 0 0 50px 0; }
+
+.chs_cards_type_title {
+  display: none; }
+
+.chs_cards_type {
+  width: 100%;
+  float: left;
+  margin-top: 50px; }
+
+ul.slideshow {
+  width: 100%;
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important; }
+
+ul.slideshow li {
+  width: 25%;
+  float: left;
+  text-align: center;
+  color: #FFFFFF !important;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  padding: 70px 0 0 0 !important;
+  cursor: pointer; }
+
+ul.slideshow li strong {
+  color: #FFFFFF !important; }
+
+ul.slideshow li:nth-child(2) span {
+  font-size: 30px !important; }
+
+ul.slideshow li:nth-child(1) {
+  padding-left: 0px; }
+
+ul.slideshow li:nth-child(2) {
+  width: 50%;
+  padding-top: 0 !important;
+  font-size: 30px !important; }
+
+ul.slideshow li img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px; }
+
+/*CARDS FACE*/
+.slide_cards {
+  height: auto;
+  padding: 2em 2em 0 0;
+  transition: all 0.5s ease-out; }
+
+/*
+li.slide_cards span{
+	color: #FFFFFF;
+}
+*/
+.chs_cards_offer {
+  width: 100%;
+  float: left;
+  margin: 30px auto 0 auto; }
+
+.chs_cards_offer_list.first {
+  padding-top: 10px !important; }
+
+.chs_cards_offer_list {
+  width: 100%;
+  float: left;
+  /* padding: 10px 0 0 0 !important; */
+  padding-top: 10px; }
+
+ul.chs_cards_offer_item {
+  /* background-color: #FFFFFF; */
+  list-style-type: none;
+  margin: 0 !important;
+  padding: 0 !important; }
+
+ul.chs_cards_offer_item > li {
+  padding: 5px 0 0 0 !important;
+  color: #FFFFFF !important;
+  position: relative;
+  text-align: center;
+  font-size: 18px; }
+
+li.chs_cards_offer_icon {
+  text-align: center;
+  /* margin-top: 20px; */ }
+
+li.chs_cards_offer_icon img {
+  height: 60px;
+  width: auto;
+  display: block;
+  margin: 0 auto; }
+
+strong.chs_cards_offer_item_title {
+  line-height: 35px;
+  font-weight: bold;
+  color: #FFFFFF;
+  line-height: 30px !important; }
+
+.chs_cards_btn_box {
+  width: 100%;
+  height: auto;
+  float: left;
+  margin-top: 30px;
+  display: block; }
+
+.chs_cards_btn {
+  width: 165px !important;
+  height: 45px !important;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+  margin: 0 auto !important;
+  background-color: #db0011;
+  border-radius: 45px;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+  box-shadow: 0px 10px 10px -10px #000; }
+
+.chs_cards_btn_green {
+  width: 250px !important;
+  height: 75px !important;
+  vertical-align: middle;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto !important;
+  background-size: cover;
+  border-radius: 75px;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+  box-shadow: 0px 10px 10px -10px #000; }
+
+.chs_cards_offer_classic .chs_cards_btn_green {
+  background-image: url(../images/cashback/chs_cards_btn_bg_classic.jpg); }
+
+.chs_cards_offer_gold .chs_cards_btn_green {
+  background-image: url(../images/cashback/chs_cards_btn_bg_cashback.jpg); }
+
+.chs_cards_offer_platinum .chs_cards_btn_green {
+  background-image: url(../images/cashback/chs_cards_btn_bg_platinum.jpg); }
+
+.chs_cards_offer_platinum .chs_cards_btn_green .chs_card_btn_border,
+.chs_cards_offer_classic .chs_cards_btn_green .chs_card_btn_border {
+  border: 2px solid #f1f1f1; }
+
+.chs_cards_offer_gold .chs_cards_btn_green .chs_card_btn_border {
+  border: 2px solid #fff1c4; }
+
+.chs_cards_offer_platinum .chs_cards_btn_green strong,
+.chs_cards_offer_platinum .chs_cards_btn_green a,
+.chs_cards_offer_platinum .chs_cards_btn > a,
+.chs_cards_offer_classic .chs_cards_btn_green strong,
+.chs_cards_offer_classic .chs_cards_btn_green a,
+.chs_cards_offer_classic .chs_cards_btn > a {
+  color: #f1f1f1 !important;
+  text-decoration: none !important;
+  font-weight: bold; }
+
+.chs_cards_offer_gold .chs_cards_btn_green strong,
+.chs_cards_offer_gold .chs_cards_btn_green a,
+.chs_cards_offer_gold .chs_cards_btn > a {
+  color: #fff1c4 !important;
+  text-decoration: none !important;
+  font-weight: bold; }
+
+.chs_cards_btn_green .chs_card_btn_border {
+  /* border: 2px solid #fff1c4; */
+  border-radius: 65px;
+  width: 240px;
+  height: 65px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.chs_cards_btn > a {
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+  font-weight: bold; }
+
+.chs_cards_btn.red > a {
+  color: #2b355d !important; }
+
+.chs_cards_btn_links {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 30px; }
+
+.chs_cards_btn_links a {
+  color: #FFFFFF !important;
+  text-decoration: underline; }
+
+/*CASHBACK*/
+.chs_offer_info {
+  width: 100%;
+  height: auto;
+  float: left;
+  margin: 0 !important; }
+
+.chs_offer {
+  width: 100%;
+  display: table;
+  float: left;
+  padding: 80px 0 0 0; }
+
+/*INSTALLMENT */
+.chs_installment_info {
+  width: 100%;
+  height: auto;
+  float: left;
+  margin: 0 !important;
+  position: relative; }
+
+.chs_installment {
+  padding: 0 0 80px 0 !important;
+  width: 100%;
+  display: table; }
+
+.chs_installment_title {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  float: left; }
+
+.chs_installment_title div {
+  font-size: 45px; }
+
+.chs_installment_title div:nth-child(2) {
+  font-size: 13px; }
+
+.chs_installment_title div strong {
+  font-family: 'UniversNextforHSBC-Bold' !important;
+  font-size: 150%; }
+
+.chs_installment_offer {
+  margin-top: 50px;
+  width: 100%;
+  height: auto;
+  float: left; }
+
+.chs_installment_offer_pc {
+  display: block; }
+
+.chs_installment_offer_mobile {
+  display: none; }
+
+div.chs_installment_offer_icon {
+  height: auto;
+  text-align: center; }
+
+div.chs_installment_offer_icon img {
+  width: 60px;
+  margin: 0 auto 10px auto !important; }
+
+img.chs_installment_offer_cards {
+  text-align: center;
+  width: 80%;
+  height: auto;
+  margin: 0 auto; }
+
+.chs_installment_offer_technical {
+  padding-left: 0px; }
+
+.chs_installment_offer_online {
+  padding-left: 120px; }
+
+.chs_installment_offer_health {
+  padding-left: 0px; }
+
+.chs_installment_offer_beauty {
+  padding-left: 0px; }
+
+.chs_installment_offer_other {
+  padding-left: 0px; }
+
+.chs_installment_offer_edu {
+  padding-left: 30px;
+  float: left; }
+
+a.chs_installment_links {
+  text-decoration: none !important; }
+
+/*PROMOTION OFFERS*/
+.chs_promotion_info {
+  width: 100%;
+  height: auto;
+  background-color: #ffdad9;
+  background-image: url(../images/cashback/chs_background_2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 400px !important;
+  float: left;
+  margin: 50px 0 0 0 !important;
+  padding: 0 0 50px 0;
+  z-index: 100;
+  position: relative;
+  /* display: table; */ }
+
+.chs_box_border {
+  position: relative;
+  height: 400px;
+  border: 2px solid #FFFFFF;
+  border-top: 0;
+  border-left: 0;
+  margin-bottom: 100px; }
+
+.chs_box_border_top {
+  position: absolute;
+  height: 2px;
+  width: calc(100% - 170px);
+  background-color: #FFFFFF;
+  top: 0;
+  right: 0; }
+
+.vna_border_top {
+  width: calc(100% - 270px); }
+
+.chs_box_border_left {
+  position: absolute;
+  width: 2px;
+  height: calc(100% - 40px);
+  background-color: #FFFFFF;
+  bottom: 0;
+  left: 0; }
+
+.chs_promotion_logo {
+  position: absolute;
+  top: -30px;
+  left: -20px;
+  height: auto;
+  width: 165px;
+  /*	width: 20%;*/ }
+
+.vna {
+  width: 250px;
+  /*	width: 20%;*/ }
+
+/*.chs_promotion_lazada, .chs_promotion_leflair, .chs_promotion_tiki, .chs_promotion_vna, .chs_promotion_adayroi, .chs_promotion_clingme {*/
+.chs_promotion_merchants {
+  width: 100%;
+  height: 400px;
+  display: none; }
+
+.chs_promotion_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 50px; }
+
+div.chs_promotion_title {
+  font-size: 20px;
+  color: #FFFFFF; }
+
+.chs_promotion_line {
+  background-color: #FFFFFF;
+  height: 2px;
+  width: 100%;
+  margin: 30px 0;
+  float: left; }
+
+.chs_promotion_offer {
+  color: #FFFFFF; }
+
+.chs_promotion_offer_title {
+  font-size: 20px;
+  color: #FFFFFF; }
+
+ul.chs_promotion_offer_list {
+  list-style-type: none;
+  margin: 0 !important;
+  padding: 0 !important; }
+
+ul.chs_promotion_offer_list > li {
+  color: #FFFFFF !important;
+  position: relative; }
+
+ul.chs_promotion_offer_list > li:before {
+  content: "-";
+  position: absolute;
+  left: 0px; }
+
+.chs_promotion_box {
+  width: 100%;
+  float: left;
+  color: #FFFFFF;
+  margin-top: 20px;
+  text-align: center; }
+
+.chs_promotion_box_item:first-child {
+  padding-left: 0px !important; }
+
+.chs_promotion_box_item {
+  border-right: 2px solid #FFFFFF;
+  padding: 0 20px 0 50px !important;
+  height: 60px;
+  color: #FFFFFF; }
+
+.chs_promotion_box_item strong {
+  font-family: 'UniversNextforHSBC-Bold' !important;
+  color: #FFFFFF;
+  font-size: 200% !important; }
+
+.chs_promotion_box_item:last-child {
+  border-right: none; }
+
+.chs_promotion_other_box {
+  position: relative;
+  height: 150px;
+  border: 2px solid #FFFFFF;
+  border-top: none;
+  border-left: none; }
+
+.chs_box_happywk {
+  z-index: 100; }
+
+.chs_promotion_other {
+  width: 100%;
+  height: auto;
+  float: left;
+  margin-top: 80px; }
+
+.chs_box_happywk_top {
+  position: absolute;
+  height: 2px;
+  width: calc(100% - 170px);
+  background-color: #FFFFFF;
+  top: 0;
+  right: 0; }
+
+.chs_box_happywk_left {
+  position: absolute;
+  width: 2px;
+  height: calc(100% - 45px);
+  background-color: #FFFFFF;
+  bottom: 0;
+  left: 0; }
+
+.chs_box_content {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  padding: 50px 30px 0 30px;
+  color: #FFFFFF; }
+
+.chs_promotion_logo_happywk {
+  position: absolute;
+  top: -50px;
+  left: -20px;
+  height: auto;
+  width: 165px; }
+
+.chs_box_happywk_title {
+  font-size: 200% !important;
+  color: #FFFFFF; }
+
+.chs_promotion_logo_homeaway {
+  position: absolute;
+  top: -40px;
+  left: -20px;
+  height: auto;
+  width: 250px; }
+
+.chs_box_homeaway_top {
+  position: absolute;
+  height: 2px;
+  width: calc(100% - 260px);
+  background-color: #FFFFFF;
+  top: 0;
+  right: 0; }
+
+.chs_box_homeaway_left {
+  position: absolute;
+  width: 2px;
+  height: calc(100% - 30px);
+  background-color: #FFFFFF;
+  bottom: 0;
+  left: 0; }
+
+.chs_promotion_tnc {
+  position: absolute;
+  bottom: -60px;
+  width: 100%; }
+
+.chs_promotion_tnc_left {
+  color: #FFFFFF;
+  font-size: 13px; }
+
+.chs_promotion_tnc_right {
+  text-align: right; }
+
+.chs_promotion_tnc_right > a {
+  color: #FFFFFF !important;
+  font-size: 13px; }
+
+.chs_box_promotion_tnc {
+  position: absolute;
+  /*	z-index: 200px;*/
+  bottom: -40px;
+  width: 100%; }
+
+/*APPLY FORM*/
+.chs_apply_form_info {
+  width: 100%;
+  float: left;
+  margin: 0 !important; }
+
+.chs_apply_form {
+  width: 100%;
+  padding: 30px 0; }
+
+/*END CODE 1920PX*/
+/* START - FORM REGISTER*/
+.chs_forms {
+  position: relative;
+  margin-top: 0;
+  width: 100%;
+  z-index: 1000; }
+
+.form {
+  background-color: #db0011; }
+
+.fixed {
+  position: fixed;
+  top: 0;
+  transition: top 1.5;
+  background-color: #db0011 !important; }
+
+/* END - FORM REGISTER*/
+.chs_translate_bg {
+  display: none; }
+
+i.glyphicon-menu-right,
+i.glyphicon-menu-left {
+  display: none; }
+
+@media (max-width: 1024px) {
+  .chs_footer_tnc {
+    margin: 0 auto;
+    float: none;
+    text-align: center; }
+
+  .chs_footer_tnc_text {
+    float: none;
+    margin: 0 auto !important;
+    text-align: center; }
+
+  .chs_footer_tnc_links > a {
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+    font-size: 12px; }
+
+  .chs_footer_tnc_links {
+    text-align: center !important;
+    float: none !important; }
+
+  /*START CODE AT HERE*/
+  .chs_slider {
+    position: relative;
+    height: 370px; }
+
+  /* .slide_viewer {
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+  } */
+  /* .chs_key_headline{
+    width: 80%;
+    position: absolute;
+    bottom: -70px;
+    left: 10%;
+    text-align: center;
+    font-size: 25px;
+  } */
+  .chs_key_headline strong {
+    font-family: 'UniversNextforHSBC-Bold' !important;
+    font-size: 45px;
+    color: #db0011; }
+
+  .chs_cards_type {
+    width: 100%;
+    float: left;
+    margin-top: 50px; }
+
+  .slide_cards {
+    height: 350px;
+    padding: 2em 2em 0 0;
+    transition: all 0.5s ease-out; }
+
+  .chs_cards_offer {
+    width: 100%;
+    float: left;
+    margin: 0 auto; }
+
+  ul.slideshow {
+    width: 100%;
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important; }
+
+  /* ul.slideshow li{
+    width: 25%;
+    float: left;
+    text-align: center;
+    color: #FFFFFF !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+    padding-top: 70px !important;
+    cursor: pointer;
+  } */
+  ul.slideshow li:nth-child(2) {
+    width: 50%;
+    height: 470px;
+    padding-top: 0 !important;
+    font-size: 30px !important; }
+
+  /* ul.slideshow li img{
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+  } */
+  .chs_cards_info {
+    background-position: 0 80px; }
+
+  .chs_cards_offer_list.first {
+    padding-top: 40px !important; } }
+@media (max-width: 980px) {
+  .chs_cards_offer_list {
+    padding-top: 40px !important; }
+
+  ul.slideshow li:nth-child(2) {
+    height: 370px; } }
+@media (max-width: 800px) {
+  .slide_viewer {
+    height: 600px;
+    overflow: hidden;
+    position: relative; }
+
+  /* .chs_key_headline{
+    width: 80%;
+    position: absolute;
+    bottom: -90px;
+    left: 10%;
+    text-align: center;
+    font-size: 22px;
+  } */
+  .chs_key_headline strong {
+    font-family: 'UniversNextforHSBC-Bold' !important;
+    font-size: 40px;
+    color: #db0011; }
+
+  .slide_cards {
+    /* height: 300px; */
+    height: auto;
+    padding: 2em 2em 0 0;
+    transition: all 0.5s ease-out; }
+
+  ul.slideshow li {
+    padding: 40px 0 0 0 !important; }
+
+  .chs_slider {
+    height: 290px; }
+
+  .chs_promotion_box_item strong {
+    font-family: 'UniversNextforHSBC-Bold' !important;
+    color: #FFFFFF;
+    font-size: 180% !important; }
+
+  .chs_box_happywk_title {
+    font-size: 180% !important;
+    color: #FFFFFF; }
+
+  ul.chs_cards_offer_item > li {
+    padding: 5px 0 0 70px !important;
+    color: #FFFFFF !important;
+    position: relative;
+    text-align: left; }
+
+  li.chs_cards_offer_icon {
+    margin-top: 0px; }
+
+  li.chs_cards_offer_icon img {
+    height: 50px;
+    width: auto;
+    display: none; }
+
+  ul.chs_cards_offer_item > li::before {
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    content: ""; }
+
+  ul.chs_cards_offer_item > li.chs_cards_offer_item_giamgia::before {
+    content: url(../images/hsbc/icons/chs_icon_giamgia.svg); }
+
+  ul.chs_cards_offer_item > li.chs_cards_offer_item_uudai::before {
+    content: url(../images/hsbc/icons/chs_icon_uudai.svg); }
+
+  ul.chs_cards_offer_item > li.chs_cards_offer_item_tichluy::before {
+    content: url(../images/hsbc/icons/chs_icon_tichluy.svg); }
+
+  ul.chs_cards_offer_item > li.chs_cards_offer_item_thoihan_45::before {
+    content: url(../images/hsbc/icons/chs_icon_thoihan_45.svg); }
+
+  ul.chs_cards_offer_item > li.chs_cards_offer_item_thoihan_55::before {
+    content: url(../images/hsbc/icons/chs_icon_thoihan_55.svg); }
+
+  ul.chs_cards_offer_item > li.chs_cards_offer_item_dacquyen::before {
+    content: url(../images/hsbc/icons/chs_icon_dacquyen.svg); }
+
+  ul.chs_cards_offer_item > li.chs_cards_offer_item_mienphi::before {
+    content: url(../images/hsbc/icons/chs_icon_mienphi.svg); }
+
+  ul.chs_cards_offer_item > li.chs_cards_offer_item_tudong::before {
+    content: url(../images/hsbc/icons/chs_icon_tudong.svg); }
+
+  .chs_cards_info {
+    background-position: 0 90px;
+    padding: 0 0 100px 0; }
+
+  .chs_cards_type {
+    margin-top: 50px; }
+
+  /* .chs_cards_btn_white {
+    width: 200px !important;
+    height: 65px !important;
+  }
+  .chs_cards_btn_white .chs_card_btn_border{
+    border: 2px solid #db0011;
+    border-radius: 59px;
+    width: 194px;
+    height: 59px;
+  } */ }
+@media (max-width: 768px) {
+  .chs_key_talent, .chs_key_item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+  .slide_viewer {
+    height: 600px;
+    overflow: hidden;
+    position: relative; }
+
+  /* .chs_key_headline{
+    width: 80%;
+    position: absolute;
+    bottom: -80px;
+    left: 10%;
+    text-align: center;
+    font-size: 22px;
+  } */
+  .chs_key_headline strong {
+    font-family: 'UniversNextforHSBC-Bold' !important;
+    font-size: 40px;
+    color: #db0011; }
+
+  .chs_btn_box {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #db0011;
+    z-index: 200;
+    display: none; } }
+@media (max-width: 600px) {
+  .chs_cards_offer_classic, .chs_cards_offer_gold, .chs_cards_offer_platinum {
+    margin-left: 100px; }
+
+  .slide_viewer {
+    height: 470px;
+    overflow: hidden;
+    position: relative; } }
+@media (max-width: 480px) {
+  ul.slideshow {
+    position: relative;
+    z-index: 100; }
+
+  ul.chs_cards_offer_item > li.chs_cards_offer_item_tudong.vi {
+    padding-top: 15px !important; }
+
+  .chs_middle {
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important; }
+
+  .chs_header_bg.sticky_show {
+    /* position: fixed; */
+    top: 0px; }
+
+  .chs_translate_bg.sticky_show {
+    /* position: fixed; */
+    top: 0px; }
+
+  .chs_header_bg {
+    text-align: center; }
+
+  .chs_header_logo {
+    margin: 0 0 0 10px !important; }
+
+  .chs_cards_offer_gold, .chs_cards_offer_platinum {
+    margin-left: 0px; }
+
+  .chs_cards_offer_classic {
+    margin-left: 15px; }
+
+  /* .chs_offer_title {
+    font-size: 33px;
+    margin-top: 100px;
+  } */
+  .chs_promotion {
+    display: table;
+    width: 100%;
+    padding: 100px 0 !important; }
+
+  .chs_promotion_box {
+    width: 100%;
+    float: left;
+    color: #FFFFFF;
+    margin-top: 20px;
+    text-align: center;
+    padding: 0 0 20px 0; }
+
+  .chs_box_border {
+    border: none !important;
+    height: 600px; }
+
+  .chs_box_border_top,
+  .chs_box_border_left {
+    height: 0px; }
+
+  .chs_promotion_logo {
+    position: absolute;
+    top: -30px;
+    left: 20%;
+    height: auto;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    /*	width: 20%;*/ }
+
+  .vna {
+    position: absolute;
+    top: -30px;
+    left: 10%;
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    /*	width: 20%;*/ }
+
+  .chs_promotion_content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 50px 0px;
+    height: 100%; }
+
+  .chs_promotion_other {
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-top: 0px; }
+
+  .chs_promotion_box_item:first-child {
+    padding-left: 0px !important;
+    margin-top: 0px; }
+
+  .chs_promotion_box_item {
+    border-right: none;
+    padding: 0 !important;
+    height: 60px;
+    color: #FFFFFF;
+    margin-top: 20px; }
+
+  .chs_promotion_box_item strong {
+    font-family: 'UniversNextforHSBC-Bold' !important;
+    color: #FFFFFF; }
+
+  .chs_promotion_box_item:last-child {
+    border-right: none; }
+
+  .chs_promotion_line {
+    background-color: #FFFFFF;
+    height: 2px;
+    width: 100%;
+    margin: 20px 0 20px 0;
+    float: left; }
+
+  .chs_promotion_tnc {
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    height: auto;
+    display: table; }
+
+  .chs_promotion_tnc_left {
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 0 !important; }
+
+  .chs_promotion_tnc_right {
+    text-align: left;
+    padding-top: 20px;
+    padding: 10px 0 0 0 !important; }
+
+  .chs_promotion_tnc_right > a {
+    color: #FFFFFF !important;
+    font-size: 13px; }
+
+  .chs_box_homeaway {
+    margin-top: 100px; }
+
+  .chs_box_content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 40px 30px 0 30px;
+    color: #FFFFFF; }
+
+  .chs_installment_offer {
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    float: left; }
+
+  .chs_installment_title {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    float: left; }
+
+  .chs_installment_title div {
+    font-size: 38px; }
+
+  .chs_installment_title div:nth-child(2) {
+    font-size: 13px; }
+
+  .chs_installment_title div strong {
+    font-family: 'UniversNextforHSBC-Bold' !important;
+    font-size: 120%; }
+
+  .chs_installment_offer_pc {
+    display: none; }
+
+  .chs_installment_offer_mobile {
+    display: block; }
+
+  div.chs_installment_offer_icon {
+    height: 140px;
+    text-align: center; }
+
+  div.chs_installment_offer_icon img {
+    width: 60%;
+    margin: 20px auto 10px auto !important; }
+
+  .chs_installment_offer_technical {
+    padding-left: 0px; }
+
+  .chs_installment_offer_online {
+    padding-left: 0px; }
+
+  .chs_installment_offer_health {
+    padding-left: 0px; }
+
+  .chs_installment_offer_beauty {
+    padding-left: 0px; }
+
+  .chs_installment_offer_other {
+    padding-left: 0px; }
+
+  .chs_installment_offer_edu {
+    padding-left: 0px; }
+
+  .chs_slider {
+    height: 150px; }
+
+  .slide_viewer {
+    height: 400px !important;
+    overflow: hidden;
+    position: relative; }
+
+  .chs_key_headline {
+    width: 100%; }
+
+  .chs_key_headline strong {
+    font-family: 'UniversNextforHSBC-Bold' !important;
+    font-size: 33px !important;
+    color: #db0011; }
+
+  /* ul.slideshow li{
+    width: 25%;
+    height: 150px;
+    float: left;
+    text-align: center;
+    color: #FFFFFF !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+    padding-top: 40px !important;
+    cursor: pointer;
+   } */
+  ul.slideshow li:nth-child(2) {
+    width: 50%;
+    padding-top: 0 !important;
+    font-size: 30px !important; }
+
+  ul.slideshow li span {
+    display: none; }
+
+  .chs_middle_cards {
+    margin: 0 !important;
+    padding: 0 !important; }
+
+  .chs_cards_type {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+    position: relative; }
+
+  i.glyphicon-menu-right {
+    position: absolute;
+    right: 10px;
+    top: 120px;
+    color: #FFFFFF;
+    display: block;
+    content: url(../images/cashback/icon_next.png);
+    width: 30px;
+    z-index: 0;
+    opacity: 0.7; }
+
+  i.glyphicon-menu-left {
+    position: absolute;
+    left: 10px;
+    top: 120px;
+    color: #FFFFFF;
+    display: block;
+    content: url(../images/cashback/icon_prev.png);
+    width: 30px;
+    z-index: 0;
+    opacity: 0.7; }
+
+  .chs_cards_type_title {
+    width: 100%;
+    height: auto;
+    display: block; }
+
+  .chs_cards_type_title strong {
+    color: #FFFFFF !important; }
+
+  .cards_platinum, .cards_gold, .cards_classic {
+    width: 100%;
+    margin: 0 auto;
+    float: left;
+    color: #FFFFFF;
+    font-size: 25px;
+    text-align: center; }
+
+  ul.slideshow li img {
+    display: none; }
+
+  ul.slideshow li:nth-child(2) img {
+    width: 110%;
+    height: auto;
+    margin: 0 0 0 -15px;
+    display: block; }
+
+  ul.slideshow li:first-child {
+    height: 150px !important;
+    background-size: 130% !important;
+    background-repeat: no-repeat !important;
+    background-position: -50px 20px !important; }
+
+  ul.slideshow li:last-child {
+    height: 150px !important;
+    background-size: 130% !important;
+    background-repeat: no-repeat !important;
+    background-position: 10px 20px !important; }
+
+  ul.slideshow li:nth-child(2) {
+    background-image: none !important;
+    height: 150px; }
+
+  .slide_cards_2 {
+    background-image: url(../images/hsbc/chs_img_cards_gold.png) !important; }
+
+  .slide_cards_1 {
+    background-image: url(../images/hsbc/chs_img_cards_platinum.png) !important; }
+
+  .slide_cards_3 {
+    background-image: url(../images/hsbc/chs_img_cards_classic.png) !important; }
+
+  .chs_box_happywk_title {
+    font-size: 150% !important;
+    color: #FFFFFF; }
+
+  .chs_cards_info {
+    background-image: url(../images/cashback/chs_background_1_m.jpg);
+    margin: 0 !important;
+    background-position: top right !important;
+    background-size: cover !important;
+    padding: 0 0 50px 0; }
+
+  /* .gold{
+    margin-bottom: 30px;
+  } */
+  ul.chs_cards_offer_item > li::before {
+    top: 5px; }
+
+  .chs_cards_offer_list {
+    padding-top: 20px !important; }
+
+  .chs_cards_offer_list.first {
+    padding-top: 10px !important; }
+
+  .chs_translate_bg {
+    display: block;
+    width: 100%;
+    background-color: #000000;
+    margin: 0 !important;
+    padding: 0 10px 0 0 !important;
+    height: 25px;
+    position: fixed;
+    /* top: 0; */
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    text-align: right; }
+
+  .chs_translate_bg a i {
+    color: #FFFFFF;
+    font-size: 10px; }
+
+  .chs_translate_bg a {
+    color: #FFFFFF !important;
+    font-size: 12px;
+    text-decoration: none !important; }
+
+  /* .chs_header_bg {
+    top: 25px;
+  } */
+  .chs_key_info {
+    margin: 100px 0 0 0 !important; }
+
+  .chs_key_headline {
+    padding: 25px 0 15px 0 !important; }
+
+  .chs_merchants_info {
+    top: -30px; }
+
+  .chs_promotion_info {
+    margin: 0 !important;
+    padding: 0 !important; } }
+@media (max-width: 375px) {
+  .chs_offer_title {
+    font-size: 30px; }
+
+  ul.chs_cards_offer_item > li.chs_cards_offer_item_tudong.gold {
+    padding-top: 5px !important; }
+
+  .chs_slider {
+    height: 140px; }
+
+  .slide_viewer {
+    height: auto;
+    overflow: hidden;
+    position: relative; }
+
+  /* .chs_key_headline{
+    width: 100%;
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    text-align: center;
+    font-size: 20px;
+    padding: 0 15px;
+  } */
+  .chs_key_headline strong {
+    font-size: 30px !important; }
+
+  .chs_promotion_other_box {
+    position: relative;
+    height: 160px;
+    border: 2px solid #FFFFFF;
+    border-top: none;
+    border-left: none; }
+
+  /* .chs_cards_info {
+      margin: 0 !important;
+      background-position: bottom left;
+      background-size: auto;
+  } */ }
+@media (max-width: 320px) {
+  .chs_middle {
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important; }
+
+  .chs_promotion_lazada {
+    width: 100%;
+    height: 650px; }
+
+  .chs_box_content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 40px 20px 0 20px;
+    color: #FFFFFF; }
+
+  .chs_key_headline {
+    padding: 25px 0 10px 0 !important; }
+
+  .chs_key_headline strong {
+    font-family: 'UniversNextforHSBC-Bold' !important;
+    font-size: 25px !important;
+    color: #db0011; }
+
+  .chs_installment_title {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    float: left; }
+
+  .chs_installment_title div {
+    font-size: 30px; }
+
+  .chs_installment_title div:nth-child(2) {
+    font-size: 13px; }
+
+  .chs_installment_title div strong {
+    font-family: 'UniversNextforHSBC-Bold' !important;
+    font-size: 120%; }
+
+  .chs_slider {
+    height: 120px; }
+
+  .slide_viewer {
+    height: auto;
+    overflow: hidden;
+    position: relative; }
+
+  ul.slideshow li:nth-child(2) img {
+    width: 130%;
+    height: auto;
+    margin: 0 0 0 -30px;
+    display: block; }
+
+  .chs_cards_offer_list {
+    padding: 0px !important; }
+
+  ul.slideshow li:last-child {
+    background-position: 15px 20px !important; } }

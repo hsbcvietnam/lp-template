@@ -1,0 +1,360 @@
+//- out: ../../public/index_vn.html, pretty: true
+extends layout
+block variables
+  -
+    var title = "Ưu đãi mở Thẻ Tín Dụng HSBC trực tuyến | HSBC VN";
+    //- MAKE SURE THE CORRECT LANGUAGE IS SELECTED, it either english or vietnamese
+    var language = "vietnamese";
+    campaignId = campaignId ? '&CampaignID=' + campaignId : "";
+
+block blockMeta
+  meta(name="description" content="Hoàn tiền 20% khi mở thẻ, giảm phí thường niên năm đầu lên đến 75%, trả góp 0% lãi suất, hoàn tiền mỗi tháng, tích điểm đổi quà và hàng trăm ưu đãi giảm giá quanh năm. Đăng ký làm thẻ ngay!")
+
+block blockCSS
+  link(rel="stylesheet", href!= cssFolder + "/selectize.css")
+  link(rel="stylesheet", href!= cssFolder + "/chs_custom.css")
+  link(rel="stylesheet", href!= cssFolder + "/style.css?v=006")
+  link(rel='canonical', href='https://card.apply.hsbc.com.vn/uu-dai-mo-the-tin-dung-HSBC/vn')
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+
+block blockJS
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+  script(src!= jsFolder + '/bootstrap.min.js')
+  script(src!= jsFolder + '/chs_custom.js')
+  script(src!= jsFolder + '/validate.js')
+  script(src!= jsFolder + '/waypoint.js')
+  script(src!= jsFolder + '/script.min.js?v=843575')
+  script(src!= jsFolder + '/vendor.js')
+
+  script(type='text/javascript').
+    var pageOption = {
+    language: 'vietnamese',
+    };
+    if (document.URL.indexOf("pid=") != -1 || document.URL.indexOf("cid=") != -1) {
+    jQuery("a[href*=' /1/2/vnm2/lead/card/the-tin-dung-hsbc-credit-card']").map(function() {
+    $(this).attr("href", $(this).attr("href").split("?")[0] + "?" + document.URL.match(/[^&?]*?=[^&?]*/)[0])
+    });
+    };
+    /*dash selection*/
+    $('#select-hometown').selectize();
+    $('#select-income').selectize();
+
+block blockTealiumHead
+  //- Start - Tealium iQ (sync.js)
+  script(src='//tags.tiqcdn.com/utag/hsbc/vn-rbwm/prod/utag.sync.js')
+  //- End - Tealium iQ (sync.js)
+
+block blockTealium
+  script.
+    // Universal Data Object
+    //- PLEASE REFER THE example.pdf FOR UDO VALUE.
+    window.utag_data = {
+      "page_url"            : location.protocol + '//' + document.domain + location.pathname + location.hash,
+      "page_name"           : location.pathname.replace(/\/(en|vn)/g, "").replace(/(https|http):\/\//, "").replace(/^/, "pws").replace(/\//g, ":").replace(/:$/, "").replace(/-/g, " "),
+      "page_language"       : pageOption.language == "vietnamese" ? "vn_vi" : "en",
+      "page_type"                  : "campaign",
+      "page_security_level" : "0",
+      "page_business_line"  : "rbwm",
+      "page_customer_group" : "general",
+      "site_section"        : "pws",
+      "product_category"    : "credit cards",
+      "product_subcategory" : "primary cards",
+      "product_id": "visa-classic, visa-platinum, visa-cash-back"
+    };
+      window.utag_data.page_category = window.utag_data.page_name.split(":")[1];
+      window.utag_data.page_subcategory = window.utag_data.page_name.split(":")[2];
+    //- Loading Tealium
+    (function(a,b,c,d,e){
+      // Change the 'production.domain.com' into the acutal application production domain.
+      b=document;e=b.domain==('card.apply.hsbc.com.vn')?'prod':'qa';
+      a='//tags.tiqcdn.com/utag/hsbc/vn-rbwm/' + e + '/utag.js';
+      c='script';d=b.createElement(c);d.src=a;
+      d.type='text/java'+c;d.async=true;
+      a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a)
+    })();
+
+block content
+  .container-fluid.chs_border(style='background-color: #FFFFFF;')
+    #hsbc_translate.row.chs_translate_bg
+      .col-xs-12.chs_middle
+        if mgm
+          a(href='/card-promotion-mgm/en')
+            | English 
+            i.glyphicon.glyphicon-chevron-down
+        else
+          a(href='/promotion-apply-credit-card-HSBC/en')
+            | English 
+            i.glyphicon.glyphicon-chevron-down
+
+
+    #hsbc_logo.row.chs_header_bg
+      .col-xs-12.chs_middle
+        a.chs_header_left(href='https://www.hsbc.com.vn/', target='_self')
+          img.chs_header_logo(src!= imageFolder + '/hsbc/chs_hsbc_logo.png', width='113', height='30', alt='')
+        .chs_header_right
+          //-
+            if mgm
+              a.chs_header_translate(href='/card-promotion-mgm/en')
+                strong EN
+            else
+              a.chs_header_translate(href='/promotion-apply-credit-card-HSBC/en')
+                strong EN
+
+          ul.chs_cards_show
+            li Chọn Thẻ
+              i.fa.fa-angle-down
+            li
+              ul.chs_cards_show_list
+                li
+                  a.chs_links_apply.platinum(href='#chs_cards_platinum') HSBC Visa Bạch Kim
+                li
+                  a.chs_links_apply.cashback(href='#chs_cards_cashback') HSBC Visa Cash Back
+                li
+                  a.chs_links_apply.classic(href='#chs_cards_classic') HSBC Visa Chuẩn
+
+    #chs_content.row
+      .chs_middle
+        if mgm
+          //  KEY
+          #chs_key_slider
+            .col-xs-12
+              .chs_box_welcome
+                img.top(src!= imageFolder + '/rocket/chs_triangle_top.png')
+                img.bottom(src!= imageFolder + '/rocket/chs_triangle_bottom.png')
+                ul.chs_box_welcome_list
+                  li Xin chào Quý khách,
+                  li Bạn của Quý khách đã giới thiệu Quý khách đăng ký mở Thẻ Tín Dụng HSBC.
+                  li Hiện nay, HSBC có rất nhiều ưu đãi hấp dẫn dành cho khách hàng mở Thẻ Tín Dụng mới. Hãy lựa chọn loại Thẻ phù hợp nhất và mở Thẻ ngay hôm nay!
+        else
+          //  KEY
+          #chs_key_slider
+            .chs_banner_mobile.hidden-xs
+              img(src!=imageFolder+'/rocket/chs_homepage_banner.jpg', alt='')
+            .chs_banner_pc
+              .col-sm-6.col-xs-12
+                .chs_banner_bg
+                  .chs_banner_title
+                    | Mở Thẻ nhanh,
+                    br
+                    | nhận mã Baemin
+                  .chs_banner_text
+                    | Chọn mở Thẻ Tín Dụng HSBC trực tuyến, nhận mã Baemin đến 2.000.000 VND cùng hàng loạt ưu đãi và dịch vụ đẳng cấp khác!
+
+        // OFFER CARDS
+        .chs_offer_list
+          .col-xs-12
+            .chs_offer_title Ưu đãi đặc biệt khi mở Thẻ Tín Dụng HSBC Visa qua Baemin
+          .col-sm-4.col-xs-12
+            .chs_offer_box.bg
+              //
+              .chs_offer_box_img
+                img(src!= imageFolder + '/rocket/chs_offer_hide.png')
+              .chs_offer_box_item.offer_items
+                .chs_offer_box_item_text
+                  .cards Nhận mã ưu đãi
+                    br
+                    | &nbsp;Baemin đến&nbsp;
+                    br
+                    strong 2 triệu VND
+                    br
+                    | &nbsp;khi mở Thẻ
+                    sup (*)
+                  ul.chs_offer_box_links
+                    li
+                      a.white(onclick="call_utag_link({'event_category': 'content','event_action': 'download', 'event_content': 'campaigntncvn1'});", href= fileFolder+'/TnC_Affiliate_Baemin.pdf', target='_blank')
+                        sup (*)
+                        | Điều khoản và Điều kiện áp dụng.
+
+          .col-sm-4.col-xs-12
+            .chs_offer_box
+              .chs_offer_box_img
+                img(src!= imageFolder + '/rocket/chs_img_box2.jpg')
+              .chs_offer_box_item.offer_items.merchants
+                .cards Ưu đãi mở Thẻ qua Baemin
+                .cards_intro Nhận mã Baemin đến 2 triệu VND khi mở Thẻ thành công qua Baemin và đạt điều kiện chi tiêu của chương trình
+                ul.chs_box_item_list
+                  li.green
+                    //-a(onclick="call_utag_link({'event_category': 'content','event_action': 'onsite', 'event_content': ''});", href='#')
+                    | Mã ưu đãi&nbsp;
+                    strong 2 triệu VND&nbsp;
+                    | cho&nbsp;
+                    strong Thẻ Tín Dụng HSBC Visa Bạch Kim
+                  li.green
+                    //-a(onclick="call_utag_link({'event_category': 'content','event_action': 'onsite', 'event_content': ''});", href='#')
+                    | Mã ưu đãi&nbsp;
+                    strong 1,2 triệu VND&nbsp;
+                    | cho&nbsp;
+                    strong Thẻ Tín Dụng HSBC Visa Cash Back
+                  li.green
+                    //-a(onclick="call_utag_link({'event_category': 'content','event_action': 'onsite', 'event_content': ''});", href='#')
+                    | Mã ưu đãi&nbsp;
+                    strong 800.000 VND
+                    | &nbsp;cho&nbsp;
+                    strong Thẻ Tín Dụng HSBC Visa Chuẩn
+                .cards_tnc
+                  | Chỉ áp dụng cho khách hàng đăng ký mở Thẻ tại trang này. Tham khảo Điều khoản và Điều kiện áp dụng tại&nbsp;
+                  a(onclick="call_utag_link({'event_category': 'content','event_action': 'download', 'event_content': 'campaigntncvn1'});", href=fileFolder+'/TnC_Affiliate_Baemin.pdf', target="_blank") đây
+          .col-sm-4.col-xs-12
+            .chs_offer_box
+              .chs_offer_box_img
+                img(src!= imageFolder + '/rocket/chs_img_box3.jpg')
+              .chs_offer_box_item.offer_items
+                .cards Ưu đãi sử dụng Thẻ
+                ul.chs_box_item_list
+                  li.green
+                    a(onclick="call_utag_link({'event_category': 'content','event_action': 'onsite', 'event_content': 'zerointerestvn'});", href='https://card.apply.hsbc.com.vn/tra-gop/dien-may-cong-nghe/vn', target='_blank')
+                      strong Trả góp 0% lãi suất
+                      | , kỳ hạn đến 24 tháng
+                  li.green
+                    a(onclick="call_utag_link({'event_category': 'content','event_action': 'onsite', 'event_content': 'dailyspendvn'});", href='https://card.apply.hsbc.com.vn/happy-weekend/vn', target='_blank')
+                      | Giảm đến 40% ẩm thực, mua sắm, giải trí, sức khỏe với&nbsp;
+                      strong Ưu đãi mỗi ngày
+                  li.green
+                    a(onclick="call_utag_link({'event_category': 'content','event_action': 'onsite', 'event_content': 'homeawayvn'});", href='https://www.hsbc.com.vn/credit-cards/rewards/', target='_blank')
+                      | Tích lũy, đổi quà hấp dẫn với&nbsp;
+                      strong Chương trình Điểm Thưởng
+
+        //OFFER CARDS
+        .chs_cards_list
+          .col-xs-12
+            .chs_offer_title Chọn ngay Thẻ Tín Dụng HSBC Visa dành riêng cho bạn
+            a(href=fileFolder+'/online_application_guide_vn_2209.pdf' style="color: #FFF; hover: #FFF; text-decoration: none" target="_blank").chs_offer_box_highlight Mở Thẻ Trực Tuyến dễ dàng, nhanh chóng
+          #chs_cards_platinum.col-sm-4.col-xs-12
+            .chs_offer_box
+              .chs_offer_box_img
+                //-img.stick(src!= imageFolder + '/hsbc/chs_cards_stick_vn.png')
+                img(src!= imageFolder + '/hsbc/chs_cards_platinum.png')
+              .chs_offer_box_item.cards
+                .cards
+                  span.special MỚI
+                  | Thẻ Tín Dụng Bạch Kim
+                strong.tnc Dành cho lương chuyển khoản từ 18 triệu VND
+                .title_offer
+                  strong Đặc quyền Chủ Thẻ Bạch Kim
+                  ul.chs_box_item_list
+                    li Hoàn tiền đến
+                      strong  8%
+                      |  cho giao dịch mua sắm trực tuyến mỗi ngày
+                    li Hoàn
+                      strong  0,3%
+                      |  cho tất cả các giao dịch khác
+                    li Thời hạn không tính lãi lên đến
+                      strong  55 ngày
+                    li Bảo hiểm mua sắm trực tuyến Visa  lên đến
+                      strong  4,6 triệu VND
+                    li Bảo hiểm Du lịch toàn cầu đến 
+                      strong  11,5 tỷ VND
+                    li Hotline riêng phục vụ 24/7
+
+                //- BTN APPLY NOW
+                .chs_box_item_btn_list
+                  //- LINK FIND OUT MORE
+                  ul.chs_offer_box_links
+                    li
+                      a(href='https://www.hsbc.com.vn/credit-cards/products/platinum-visa/', target='_blank') Tìm hiểu thêm về Thẻ Bạch Kim
+                    li
+                      a(onclick="call_utag_link({'event_category': 'content','event_action': 'popup', 'event_content': 'regconditionplatvn'});", data-toggle='modal', data-target='#chs_popup_tnc_platinum' href="#") Điều kiện đăng ký
+                    li
+                      a(href=fileFolder+'/online_application_guide_vn_2209.pdf', target='_blank')
+                        strong Cách thức mở Thẻ Trực Tuyến
+
+                  .chs_box_item_btn.platinum
+                    .chs_box_item_btn_line
+                      //a(href=rocket.host + rocket.offer_vn + '?PdC=VPC' + campaignId, rel="nofollow")
+                      | MỞ THẺ TRỰC TUYẾN
+                    i.fa.fa-angle-double-right
+          #chs_cards_cashback.col-sm-4.col-xs-12
+            .chs_offer_box
+              .chs_offer_box_img
+                img(src!= imageFolder + '/hsbc/chs_cards_cashback.png')
+              .chs_offer_box_item.cards
+                .cards Thẻ Tín Dụng Cash Back
+                strong.tnc Dành cho lương chuyển khoản từ 9 triệu VND
+                .title_offer
+                  strong Đặc quyền Chủ Thẻ Cash Back
+                  ul.chs_box_item_list
+                    li Hoàn tiền đến
+                      strong  8%
+                      |  cho chi tiêu Siêu thị và Cửa hàng Tiện lợi
+                    li Hoàn tiền
+                      strong  1%
+                      |  không giới hạn cho chi tiêu Bảo hiểm và Giáo dục
+                    li Hoàn tiền
+                      strong  0,3%
+                      |  không giới hạn cho chi tiêu khác
+                    li Hotline riêng phục vụ 24/7
+                    li Bảo hiểm Du lịch toàn cầu đến
+                      strong  11,5 tỷ VND
+
+                //- BTN APPLY NOW
+                .chs_box_item_btn_list
+                  //- LINK FIND OUT MORE
+                  ul.chs_offer_box_links
+                    li
+                      a(href='https://www.hsbc.com.vn/credit-cards/products/cashback/', target='_blank') Tìm hiểu thêm về Thẻ Cash Back
+                    li
+                      a(onclick="call_utag_link({'event_category': 'content','event_action': 'popup', 'event_content': 'regconditioncbvn'});", data-toggle='modal', data-target='#chs_popup_tnc_cashback' href="#") Điều kiện đăng ký
+                    li
+                      a(href=fileFolder+'/online_application_guide_vn_2209.pdf', target='_blank')
+                        strong Cách thức mở Thẻ Trực Tuyến
+                  .chs_box_item_btn.cashback
+                    .chs_box_item_btn_line
+                      //a(href=rocket.host + rocket.offer_vn + '?PdC=CVG'  + campaignId, rel="nofollow")
+                      | MỞ THẺ TRỰC TUYẾN
+                    i.fa.fa-angle-double-right
+          #chs_cards_classic.col-sm-4.col-xs-12
+            .chs_offer_box
+              .chs_offer_box_img
+                img(src!= imageFolder + '/hsbc/chs_cards_classic.png')
+              .chs_offer_box_item.cards
+                .cards Thẻ Tín Dụng Chuẩn
+                strong.tnc Dành cho lương chuyển khoản từ 8 triệu VND
+                .title_offer
+                  strong Đặc quyền Chủ Thẻ Chuẩn
+                  ul.chs_box_item_list
+                    li
+                      strong Tích lũy Điểm thưởng để quy đổi
+                      | &nbsp;hoàn tiền, phí thường niên, mã quà tặng hoặc dặm bay hấp dẫn,&nbsp;
+                      strong 1.000 VND chi tiêu
+                      | &nbsp;= 1 Điểm
+                    li Thời hạn không tính lãi đến&nbsp;
+                      strong 45 ngày 
+                    li Trả góp
+                      strong  0%
+                      |  lãi suất đến 12 tháng
+
+                //- BTN APPLY NOW
+                .chs_box_item_btn_list
+                  //- LINK FIND OUT MORE
+                  ul.chs_offer_box_links
+                    li
+                      a(href='https://www.hsbc.com.vn/credit-cards/products/classic-visa/', target='_blank') Tìm hiểu thêm về Thẻ Chuẩn
+                    li
+                      a(onclick="call_utag_link({'event_category': 'content','event_action': 'popup', 'event_content': 'regconditionclavn'});", data-toggle='modal', data-target='#chs_popup_tnc_classic' href="#") Điều kiện đăng ký
+                    li
+                      a(href=fileFolder+'/online_application_guide_vn_2209.pdf', target='_blank')
+                        strong Cách thức mở Thẻ Trực Tuyến
+                  .chs_box_item_btn.classic
+                    .chs_box_item_btn_line
+                      //a(href=rocket.host + rocket.offer_vn + '?PdC=CVC' + campaignId, rel="nofollow")
+                      | MỞ THẺ TRỰC TUYẾN
+                    i.fa.fa-angle-double-right
+
+    //- FORM APPLY
+    #chs_footer
+      .container
+        .row
+          .col-sm-6.col-xs-12
+            ul.chs_footer_item
+              li
+                a(href="https://www.hsbc.com.vn/hyperlink-policy/", target='_blank') Chính sách siêu liên kết
+              li
+                a(href="https://www.hsbc.com.vn/privacy-and-security/", target='_blank') Quyền riêng tư và bảo mật
+              li
+                a(href="https://www.hsbc.com.vn/terms-of-use/", target='_blank') Điều khoản sử dụng
+              li
+                a(href="https://www.fatca.hsbc.com/vi-vn/rbwm/vietnam", target='_blank') FATCA
+          .col-sm-6.col-xs-12
+            p © Bản quyền 2021 thuộc về Ngân hàng TNHH Một thành viên HSBC (Việt Nam).<br>Tất cả các quyền được bảo hộ.
+    include popup/popup_vi
